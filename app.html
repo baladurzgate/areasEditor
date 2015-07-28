@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="jquery1.js"></script>
+<script src="imgMap.js"></script>
+<style>
+#tablo{
+	display:none;
+}
+</style>
+</head>
+<body>
+
+<img id = "tablo" src="bruegel.jpg">
+<div id = "me"></div>
+
+<script>
+
+
+
+$(function() {
+
+	me = new Map_editor();
+	
+	me.init("tablo","#me");
+	
+});
+</script>
+</body>
