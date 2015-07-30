@@ -244,6 +244,20 @@ function Map_editor(){
 		draw_polygon();
 	
 	}
+	
+	function update_post(){
+			
+		$.ajax({
+			type: "POST",
+			url: "update_post_areas.php",
+			data: "post_id=" + name + "&post_areas=" + link ,
+			cache: true,
+			success: function(data) {
+				alert("success!");
+			}
+		});
+			
+	}
 
 
 }
