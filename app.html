@@ -10,19 +10,32 @@
 </head>
 <body>
 
-<img id = "tablo" src="bruegel.jpg">
-<div id = "me"></div>
-
+<img id = "ae_source_image" src="bruegel.jpg">
+<div id = "ae_top-panel"></div>
+<div id = "ae_left-panel"></div>
+<div id = "ae_center-panel"></div>
+<div id = "ae_right-panel"></div>
 <script>
 
 
+'use strict';
 
-$(function() {
+$(document).ready(function() {
 
-	me = new Map_editor();
-	
-	me.init("tablo","#me");
-	
+	  console.log('image loaded');
+	  $('#load_gif').hide();
+	  $('#conteneur').show();
+	  
+		if(document.getElementById("ae_center-panel")!== null){
+			
+			console.log("areas editor");
+			
+			var AE = new Areas_Editor();
+			
+			AE.init("ae_source_image","#ae_top-panel","#ae_left-panel","#ae_center-panel","#ae_right-panel");
+			
+		};
+	  
 });
 </script>
 </body>
